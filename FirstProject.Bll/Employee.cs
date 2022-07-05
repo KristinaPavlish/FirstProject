@@ -1,4 +1,3 @@
-using Microsoft.VisualBasic;
 namespace FirstProject.Bll;
 
 public class Employee
@@ -7,6 +6,11 @@ public class Employee
     private int _workExperience;
     private int _numberOfHoursWorked;
     private int _rateOfCompletedWorks;
+
+    public override string ToString()
+    {
+        return _fullName;
+    }
 
     public Employee(string fullName, int workExperience, int numberOfHoursWorked, int rateOfCompletedWorks)
     {
