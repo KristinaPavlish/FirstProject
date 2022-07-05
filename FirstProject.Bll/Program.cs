@@ -1,4 +1,4 @@
-﻿using Classes;
+﻿using FirstProject.Bll;
 Console.WriteLine(TestTotalSalary());
 Console.WriteLine(TestNameInitials());
 Console.WriteLine(BoolTestTotalSalary()?"The salary is calculated correctly":"The salary is calculated incorrectly");

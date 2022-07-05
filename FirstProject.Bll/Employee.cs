@@ -1,5 +1,5 @@
 using Microsoft.VisualBasic;
-namespace Classes;
+namespace FirstProject.Bll;
 
 public class Employee
 {
