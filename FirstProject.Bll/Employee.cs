@@ -1,27 +1,52 @@
 namespace FirstProject.Bll;
+// TODO refactor code to use Employee model 
+// TODO employee on this file become to Employee service to process employee model
 
 public class Employee
 {
     private string _fullName;
-    private int _workExperience;
-    private int _numberOfHoursWorked;
-    private int _rateOfCompletedWorks;
+    private uint _workExperience;
+    private uint _numberOfHoursWorked;
+    private uint _rateOfCompletedWorks;
+    private uint _hourlyWage;
 
     public override string ToString()
     {
         return _fullName;
     }
 
-    public Employee(string fullName, int workExperience, int numberOfHoursWorked, int rateOfCompletedWorks)
+    public string GetName()
     {
-        this._fullName = fullName;
-        this._workExperience = workExperience;
-        this._numberOfHoursWorked = numberOfHoursWorked;
-        this._rateOfCompletedWorks = rateOfCompletedWorks;
+        return _fullName;
     }
-    public double CalculationOfWages(int rateOfPayPerHour)
+
+    public uint GetRateOfCompletedWorks()
     {
-        double salary = _numberOfHoursWorked * rateOfPayPerHour;
+        return _rateOfCompletedWorks;
+    }
+
+    public uint GetNumberOfHoursWorked()
+    {
+        return _numberOfHoursWorked;
+    }
+
+    public uint GetExperience()
+    {
+        return _workExperience;
+    }
+    
+    public Employee(string fullName, uint workExperience, uint numberOfHoursWorked, uint rateOfCompletedWorks, uint hourlyWage)
+    {
+       _fullName = fullName;
+       _workExperience = workExperience;
+       _numberOfHoursWorked = numberOfHoursWorked;
+       _rateOfCompletedWorks = rateOfCompletedWorks;
+       _hourlyWage = hourlyWage;
+    }
+    public Employee(){}
+    public double CalculationOfWages()
+    {
+        double salary = _numberOfHoursWorked * _hourlyWage;
         
         if (_numberOfHoursWorked < _rateOfCompletedWorks)
         {
@@ -57,11 +82,6 @@ public class Employee
         string[] initialsWithoutSurname = string.Join(" ", _fullName.Split().Skip(1)).Split();
 
         initials += string.Join("", initialsWithoutSurname.Select(x => x.Substring(0, 1).ToUpper() + "."));
-
-      /*foreach (string name in initialsWithoutSurname)
-        {
-            initials += name.Substring(0, 1).ToUpper() + ".";
-        }*/
 
         return initials;
     }
