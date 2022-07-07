@@ -168,6 +168,5 @@ public class CompanyTest
                 
                 Assert.That(company.FindEmployeeByLastName("Ivasiuk"), Is.EqualTo(null));
         }
-        // TODO if is two the same last name in FindEmployeeByLastName();
         
 }
