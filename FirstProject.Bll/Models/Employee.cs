@@ -7,6 +7,13 @@ public class Employee
     public uint RateOfCompletedWorks{ get; set; }
     public uint HourlyWage{ get; set; }
 
+    public override string ToString()
+    {
+        return "Full name: " + FullName + "\nWorkExperience: " + WorkExperience + "\nNumberOfHoursWorked: " +
+               NumberOfHoursWorked + "\nRateOfCompletedWorks: " + RateOfCompletedWorks + "\nHourlyWage: " +
+               HourlyWage;
+    }
+
     public bool IsValid()
     {
         var result = !string.IsNullOrEmpty(FullName) && WorkExperience != 0 && NumberOfHoursWorked != 0 &&

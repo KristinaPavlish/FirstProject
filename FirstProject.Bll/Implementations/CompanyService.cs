@@ -92,15 +92,6 @@ public class CompanyService : ICompanyService
     /// <exception cref="NotImplementedException"></exception>
     public void RemoveEmployeeByExperienceAge(uint lowerAge, Company company)
     {
-       // if (company.Employees.ToList().Count == 0)
-       // {
-       //     throw new Exception("Company is empty");
-       // }
-//
-       // company.Employees.Remove(company.Employees.Find(x => x.WorkExperience < lowerAge) ?? throw new InvalidOperationException());
-        //  Employee employee = new Employee();
-        //  var itemToRemove = company.Employees.First(item => employee.WorkExperience < lowerAge);
-        //  company.Employees.Remove(itemToRemove);
         foreach (var employee in company.Employees.ToList())
         {
             if (employee.WorkExperience < lowerAge)
@@ -108,8 +99,6 @@ public class CompanyService : ICompanyService
                 company.Employees.Remove(employee);
             }
         }
-
-      
     }
 
     /// <summary> Find Employee by the last name </summary>
@@ -119,10 +108,8 @@ public class CompanyService : ICompanyService
     /// <exception cref="NotImplementedException"></exception>
     public List<Employee> FindEmployeeByLastName(string lastName, Company company)
     {
-        if (company.Employees.ToList().Count == 0)
-        {
-            throw new Exception("Company is empty");
-        }
-        return company.Employees.Where(x => x.FullName.Split(' ').FirstOrDefault()== lastName).ToList();
+        return company.Employees == null
+            ? new List<Employee>()
+            : company.Employees.Where(x => x.FullName.Split(' ').FirstOrDefault() == lastName).ToList();
     }
 }

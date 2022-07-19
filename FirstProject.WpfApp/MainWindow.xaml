@@ -1,0 +1,73 @@
+﻿<Window x:Class="FirstProject.WpfApp.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:FirstProject.WpfApp"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+    <Grid>
+        <StackPanel>
+        <StackPanel Background="Pink" Width="400" Height = "100" HorizontalAlignment="Left"> 
+            <Label FontWeight="Light" Background="SlateGray" FontSize="15" HorizontalContentAlignment="Stretch">
+                Company
+            </Label>
+            <Label Background="Aqua">
+                Company name 
+            </Label>
+            <TextBox Name = "companyNameTextBox" Background="Teal">
+            </TextBox>
+            <Button Name = "companyNameButton" Background="DarkSlateGray" Height="27" Click = "CompanyNameButton_OnClick">
+                Add name
+            </Button>
+        </StackPanel>
+        <StackPanel Background="Pink" Width="400" Height = "350" HorizontalAlignment="Left">
+            <Label FontWeight="Light" Background="SlateGray" FontSize="15" HorizontalContentAlignment="Stretch">
+                Employee
+            </Label>
+            <Label Background="Aqua" >
+                FullName
+            </Label>
+            <TextBox Name= "textBoxFullName" Background="Teal" GotFocus ="TextBoxFullName_OnGotFocus">
+            </TextBox>
+            <Label Background="Aqua" >
+                HourlyWage
+            </Label>
+            <TextBox Name= "textBoxHourlyWage" Background="Teal" GotFocus ="TextBoxHourlyWage_OnGotFocus">
+            </TextBox>
+            <Label Background="Aqua" >
+                WorkExperience
+            </Label>
+            <TextBox Name= "textBoxWorkExperience" Background="Teal" GotFocus ="TextBoxWorkExperience_OnGotFocus">
+            </TextBox>
+            <Label Background="Aqua" >
+                NumberOfHoursWorked
+            </Label>
+            <TextBox Name= "textBoxNumberOfHoursWorked" Background="Teal" GotFocus = "TextBoxNumberOfHoursWorked_OnGotFocus">
+            </TextBox>
+            <Label Background="Aqua" >
+                RateOfCompletedWorks
+            </Label>
+            <TextBox Name= "textBoxRateOfCompletedWorks"  Background="Teal" GotFocus="TextBoxRateOfCompletedWorks_OnGotFocus">
+            </TextBox>
+            
+            <Button Background="DarkSlateGray" Height="50" Click="ButtonBase_OnClick">
+                Hire employee
+            </Button>
+        </StackPanel>
+        </StackPanel>
+        <StackPanel Background="Pink" Width="400" HorizontalAlignment="Right">
+            <Label Name ="companyNameLabel">
+            </Label>
+            <ListView Background="Pink" Margin="10" Name="lvDataBinding" Height="300" ScrollViewer.VerticalScrollBarVisibility="Auto">
+            </ListView>
+            <Button Name = "saveChanges" Click ="SaveChanges_OnClick" >
+                Save to file
+            </Button>
+            <Button Name = "uploadChanges" Click="UploadChanges_OnClick">
+                Upload from file
+            </Button>
+        </StackPanel>
+        
+    </Grid>
+</Window>

@@ -626,17 +626,8 @@ public class CompanyTest
         {
                 Company company = new Company();
                 CompanyService companyService = new CompanyService(new EmployeeService());
-                Employee employee1 = new Employee()
-                {
-                        FullName = "Temnyk Ivan Viktorovytch",
-                        HourlyWage = 35,
-                        WorkExperience = 10,
-                        NumberOfHoursWorked = 7,
-                        RateOfCompletedWorks = 8
-                };  
-                companyService.HireEmployee(company, employee1);
-                List<Employee> EmployeeList = new List<Employee>();
-                Assert.That(companyService.FindEmployeeByLastName("Halushchynskyi", company), Is.EqualTo(EmployeeList));
+                Assert.That(companyService.FindEmployeeByLastName("Halushchynskyi", company),
+                        Is.EqualTo(new List<Employee>()));
 
         }
 }

@@ -4,6 +4,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FirstProject.Bll", "FirstPr
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FirstProject.Test", "FirstProject.Test\FirstProject.Test.csproj", "{1F122DDB-85D1-40C9-BE76-96F7F34032BC}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FirstProject.ConsoleApp", "FirstProject.ConsoleApp\FirstProject.ConsoleApp.csproj", "{CAA174AE-F7DD-4C55-8807-E7E5509A8C73}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FirstProject.WpfApp", "FirstProject.WpfApp\FirstProject.WpfApp.csproj", "{3F7A6B86-3243-4432-981D-5B346597D7B2}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -18,5 +22,13 @@ Global
 		{1F122DDB-85D1-40C9-BE76-96F7F34032BC}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{1F122DDB-85D1-40C9-BE76-96F7F34032BC}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{1F122DDB-85D1-40C9-BE76-96F7F34032BC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CAA174AE-F7DD-4C55-8807-E7E5509A8C73}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CAA174AE-F7DD-4C55-8807-E7E5509A8C73}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CAA174AE-F7DD-4C55-8807-E7E5509A8C73}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CAA174AE-F7DD-4C55-8807-E7E5509A8C73}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3F7A6B86-3243-4432-981D-5B346597D7B2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3F7A6B86-3243-4432-981D-5B346597D7B2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3F7A6B86-3243-4432-981D-5B346597D7B2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3F7A6B86-3243-4432-981D-5B346597D7B2}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal
